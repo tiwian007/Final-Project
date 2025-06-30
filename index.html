@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer with Music</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ZenPomo</h1>
+        <div class="options">
+            <label for="background-select">Background:</label>
+            <select id="background-select">
+                <option value="night1">1</option>
+                <option value="night2">2</option>
+                <option value="night3">3</option>
+                <option value="night4">4</option>
+            </select>
+            <label for="music-select">Music:</label>
+            <select id="music-select">
+                <option value="https://soundplusua.com/wp-content/uploads/edd/2023/03/Cinematic-Ambient.mp3">Cinematic Ambient - SoundPlusUA</option>
+                <option value="https://soundplusua.com/wp-content/uploads/edd/2023/02/Time-To-Chill.mp3">Time To Chill - SoundPlusUA</option>
+                <option value="https://soundplusua.com/wp-content/uploads/edd/2023/03/Inspiring-Ambient-Cinematic.mp3">Inspiring Ambient Cinematic - SoundPlusUA</option>
+                <option value="https://soundplusua.com/wp-content/uploads/edd/2023/07/Peace-Meditation.mp3">Peace Meditation (Nature) - SoundPlusUA</option>
+            </select>
+        </div>
+        <div class="session-options">
+            <button id="pomodoro-btn">Pomodoro</button>
+            <button id="shortbreak-btn">Short Break</button>
+            <button id="longbreak-btn">Long Break</button>
+        </div>
+        <div id="session-label">Work Session</div>
+        <div class="progress-circle">
+            <svg width="160" height="160">
+                <circle cx="80" cy="80" r="70" stroke="#e0e0e0" stroke-width="12" fill="none" />
+                <circle id="progress" cx="80" cy="80" r="70" stroke="#0984e3" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="439.82" stroke-dashoffset="0"/>
+            </svg>
+            <div id="timer" class="timer-text">25:00</div>
+        </div>
+        <div class="controls">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="reset">Reset</button>
+        </div>
+        <div class="music-controls">
+            <button id="music-toggle">Play Music</button>
+            <audio id="background-music" loop>
+                <source src="https://soundplusua.com/wp-content/uploads/edd/2023/03/Cinematic-Ambient.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+       
+    </div>
+    <audio id="alarm-sound" src="https://orangefreesounds.com/wp-content/uploads/2025/06/Dreamy-downtempo-ambient-music-drive-through-dreamy-land.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
